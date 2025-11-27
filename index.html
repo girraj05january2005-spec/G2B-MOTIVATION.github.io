@@ -1,338 +1,298 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8" />
-    <title>G2B Motivation | Official Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="G2B Motivation - Daily motivational posts, thoughts and quotes." />
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8" />
+<title>G2B Motivation | Daily Hindi Motivational Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="G2B Motivation — Hindi motivational posts, life lessons, short quotes, and positive thoughts. Stay inspired." />
+<meta name="keywords" content="motivation, hindi motivation, g2b motivation, daily motivation, hindi quotes, positive thinking, mindset, goal setting" />
 
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: #050816;
-            color: #f5f5f5;
-            line-height: 1.6;
-        }
+<link rel="icon" type="image/png" href="https://i.imgur.com/OVQ0FZK.png">
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 16px;
-        }
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-        header {
-            padding: 16px 0;
-            margin-bottom: 12px;
-            border-bottom: 1px solid #1c2333;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        .logo {
-            font-size: 26px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #00e5ff;
-        }
+body{
+    font-family:system-ui;
+    background:#050816;
+    color:#fff;
+    line-height:1.6;
+    opacity:0;
+    animation:fadeIn 1s forwards;
+}
 
-        .tagline {
-            font-size: 13px;
-            color: #c7c7c7;
-        }
+@keyframes fadeIn{
+    to{opacity:1;}
+}
 
-        nav a {
-            font-size: 14px;
-            text-decoration: none;
-            color: #d0d0d0;
-            margin-left: 12px;
-        }
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:16px;
+}
 
-        nav a:hover {
-            color: #00e5ff;
-        }
+/* HEADER */
+header{
+    padding:18px 0;
+    border-bottom:1px solid #1c2333;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
 
-        .hero {
-            background: radial-gradient(circle at top left, #00e5ff22, transparent),
-                        radial-gradient(circle at bottom right, #ff00ff22, transparent),
-                        #080b1a;
-            border-radius: 16px;
-            padding: 20px;
-            margin: 12px 0 22px;
-            border: 1px solid #1c2333;
-        }
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#00e5ff;
+}
 
-        .hero-title {
-            font-size: 24px;
-            margin-bottom: 6px;
-        }
+.tagline{
+    font-size:13px;
+    color:#ccc;
+}
 
-        .hero-subtitle {
-            font-size: 14px;
-            color: #d0d0d0;
-            margin-bottom: 10px;
-        }
+nav a{
+    color:#d0d0d0;
+    margin-left:16px;
+    text-decoration:none;
+    font-size:15px;
+    transition:0.3s;
+}
 
-        .hero-note {
-            font-size: 12px;
-            color: #9bb0ff;
-        }
+nav a:hover{
+    color:#00e5ff;
+    text-shadow:0 0 10px #00e5ff;
+}
 
-        .btn-primary {
-            display: inline-block;
-            margin-top: 14px;
-            padding: 8px 16px;
-            border-radius: 999px;
-            border: none;
-            background: linear-gradient(135deg, #00e5ff, #6b5cff);
-            color: #050816;
-            font-weight: 600;
-            font-size: 14px;
-            text-decoration: none;
-        }
+/* HERO */
+.hero{
+    background:#080b1a;
+    border:1px solid #1c2333;
+    border-radius:16px;
+    padding:24px;
+    margin-top:18px;
+    box-shadow:0 0 25px #0007;
+}
 
-        .btn-primary:hover {
-            opacity: 0.9;
-        }
+.hero-title{
+    font-size:26px;
+}
 
-        h2.section-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-            margin-top: 10px;
-        }
+.hero-subtitle{
+    color:#cfcfcf;
+    margin-top:6px;
+}
 
-        .posts {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            margin-bottom: 24px;
-        }
+.btn-primary{
+    display:inline-block;
+    margin-top:16px;
+    padding:10px 20px;
+    background:linear-gradient(135deg,#00e5ff,#6b5cff);
+    border-radius:999px;
+    color:#000;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+}
 
-        .post-card {
-            background: #0a0f23;
-            border-radius: 12px;
-            padding: 14px 16px;
-            border: 1px solid #1f2840;
-        }
+.btn-primary:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 14px #00e5ff;
+}
 
-        .post-title {
-            font-size: 17px;
-            margin-bottom: 4px;
-        }
+/* POSTS */
+.section-title{
+    margin-top:20px;
+    margin-bottom:12px;
+    font-size:20px;
+}
 
-        .post-meta {
-            font-size: 12px;
-            color: #a0a0a0;
-            margin-bottom: 6px;
-        }
+.posts{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
 
-        .post-meta span {
-            margin-right: 8px;
-        }
+.post-card{
+    background:#0a0f23;
+    border-radius:14px;
+    padding:18px;
+    border:1px solid #1f2840;
+    transition:0.3s;
+}
 
-        .post-text {
-            font-size: 14px;
-            color: #e4e4e4;
-        }
+.post-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 15px #0006;
+}
 
-        .post-tags {
-            margin-top: 8px;
-            font-size: 11px;
-            color: #9bb0ff;
-        }
+.post-title{
+    font-size:19px;
+    font-weight:600;
+}
 
-        .post-tags span {
-            margin-right: 6px;
-        }
+.post-meta{
+    font-size:13px;
+    color:#aaa;
+    margin:6px 0;
+}
 
-        .read-more {
-            margin-top: 8px;
-            font-size: 13px;
-        }
+.post-tags{
+    color:#9bb0ff;
+    font-size:12px;
+    margin-top:10px;
+}
 
-        .read-more a {
-            color: #00e5ff;
-            text-decoration: none;
-        }
+.read-more{
+    margin-top:10px;
+}
 
-        .read-more a:hover {
-            text-decoration: underline;
-        }
+.read-more a{
+    color:#00e5ff;
+    font-weight:600;
+    text-decoration:none;
+}
 
-        footer {
-            border-top: 1px solid #1c2333;
-            padding: 14px 0;
-            font-size: 12px;
-            color: #9a9a9a;
-            text-align: center;
-        }
+.read-more a:hover{
+    text-decoration:underline;
+}
 
-        @media (max-width: 600px) {
-            .hero-title {
-                font-size: 20px;
-            }
+/* CONTACT */
+.contact-box{
+    margin-top:12px;
+    font-size:14px;
+}
 
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+/* FOOTER */
+footer{
+    text-align:center;
+    margin-top:30px;
+    padding:16px 0;
+    border-top:1px solid #1c2333;
+    font-size:13px;
+    color:#bbb;
+}
 
-            nav {
-                margin-top: 4px;
-            }
+.social{
+    margin:10px 0;
+}
 
-            nav a {
-                margin-left: 0;
-                margin-right: 12px;
-            }
-        }
-    </style>
+.social a{
+    margin:0 8px;
+    font-size:22px;
+    color:#00e5ff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social a:hover{
+    color:#fff;
+    text-shadow:0 0 10px #00e5ff;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    nav{
+        margin-top:8px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <!-- TOP HEADER -->
-        <header>
-            <div>
-                <div class="logo">G2B MOTIVATION</div>
-                <div class="tagline">Stay inspired. Never stop creating.</div>
-            </div>
-            <nav>
-                <a href="#posts">Posts</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
 
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <h1 class="hero-title">Daily Motivation in Simple Hindi</h1>
-            <p class="hero-subtitle">
-                Yaha par main apni motivational posts, thoughts, quotes aur short notes share karta hoon.
-                Roz thoda sa padhoge, to soch badlegi, aur soch badlegi to zindagi badlegi.
+<div class="container">
+
+<header>
+    <div>
+        <div class="logo">G2B MOTIVATION</div>
+        <div class="tagline">Stay inspired. Never stop creating.</div>
+    </div>
+    <nav>
+        <a href="#posts">Posts</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1 class="hero-title">Daily Motivation in Simple Hindi</h1>
+    <p class="hero-subtitle">
+        Yaha par main motivational posts, thoughts, quotes aur life-changing ideas share karta hoon.
+    </p>
+    <a href="#posts" class="btn-primary">Latest Posts Dekho</a>
+</section>
+
+<section id="posts">
+    <h2 class="section-title">Latest Posts</h2>
+
+    <div class="posts">
+
+        <article class="post-card">
+            <h3 class="post-title">1. Aaj ka Sankalp</h3>
+            <div class="post-meta">🗓️ 27 Nov 2025 • ⏱️ 1 min</div>
+            <p class="post-text">
+                Har din ek chhota step lo. Chhote steps hi bade achievements banate hain.
             </p>
-            <p class="hero-note">
-                👉 Tip: Is page ko bookmark kar lo, taaki jab chaaho turant motivation mil sake.
-            </p>
-            <a class="btn-primary" href="#posts">Latest Posts Dekho</a>
-        </section>
+            <div class="post-tags">#motivation #g2b #smallsteps</div>
 
-        <!-- POSTS LIST -->
-        <section id="posts">
-            <h2 class="section-title">Latest Posts</h2>
-
-            <!-- 🟢 POST 1  (Is block ko copy karke nayi post bana sakte ho) -->
-            <article class="post-card">
-                <h3 class="post-title">1. Aaj ka Sankalp</h3>
-                <div class="post-meta">
-                    <span>🗓️ 27 November 2025</span>
-                    <span>⏱️ 1 min read</span>
-                </div>
-                                <p class="post-text">
-                    Aaj se ek chhota sa rule bana lo: 
-                    <br>
-                    <strong>“Main har din kam se kam 1 chhota kaam zaroor karunga jo mujhe mere goal ke kareeb le jaaye.”</strong>
-                    <br><br>
-                    Chaahe wo 10 minute padhai ho, ek page planning ho, ya ek naya skill seekhna ho – chhota step bhi zero se accha hota hai.
-                </p>
-                <div class="post-tags">
-                    <span>#daily-motivation</span>
-                    <span>#g2b</span>
-                    <span>#small-steps</span>
-                </div>
             <div class="read-more">
-    <a href="posts/post1.html">Read Full Post →</a>
-</div>
-</article>
+                <a href="posts/post1.html">Read Full Post →</a>
+            </div>
+        </article>
 
-            <!-- 🟢 POST 2 -->
-            <article class="post-card">
-                <h3 class="post-title">2. Soch Badlo, Result Badlenge</h3>
-                <div class="post-meta">
-                    <span>🗓️ 26 November 2025</span>
-                    <span>⏱️ 1 min read</span>
-                </div>
-                <p class="post-text">
-                    Jab tak hum apne aap ko “main nahi kar sakta” bolte rahenge,
-                    dimaag hamesha reason dhundega ki kyun nahi kar sakte.
-                    <br><br>
-                    Lekin jaise hi hum bolna shuru karte hain 
-                    <strong>“main try karunga, main seekh sakta hoon”</strong>,
-                    dimaag solution dhundna shuru kar deta hai.
-                </p>
-                <div class="post-tags">
-                    <span>#mindset</span>
-                    <span>#positive-thinking</span>
-                </div>
-            </article>
-
-            <!-- 🟢 POST 3 -->
-            <article class="post-card">
-                <h3 class="post-title">3. Fail Hone Ka Dar Chhodo</h3>
-                <div class="post-meta">
-                    <span>🗓️ 25 November 2025</span>
-                    <span>⏱️ 2 min read</span>
-                </div>
-                <p class="post-text">
-                    Zyada tar log isliye nahi haarte kyunki wo kamzor hote hain,
-                    balki isliye kyunki wo shuru hi nahi karte.
-                    <br><br>
-                    Har failure ek feedback hai: 
-                    “Ye tareeka kaam nahi kar raha, koi naya tareeka try karo.”
-                    <br>
-                    Jab tak rukoge nahi, tab tak asli failure ho hi nahi sakta.
-                </p>
-                <div class="post-tags">
-                    <span>#no-fear</span>
-                    <span>#keep-going</span>
-                </div>
-            </article>
-
-            <!-- Yaha se neeche aur posts add kar sakte ho -->
-        </section>
-
-        <!-- ABOUT SECTION -->
-        <section id="about">
-            <h2 class="section-title">About G2B Motivation</h2>
+        <article class="post-card">
+            <h3 class="post-title">2. Soch Badlo, Zindagi Badlegi</h3>
+            <div class="post-meta">🗓️ 26 Nov 2025 • ⏱️ 1 min</div>
             <p class="post-text">
-                G2B Motivation ek simple online jagah hai jahan par main apne 
-                motivational thoughts, real life learnings aur chhoti–chhoti baatein 
-                share karta hoon, jo kisi bhi normal insaan ko help kar sakti hain
-                apni zindagi thodi better banane me.
-                <br><br>
-                Target simple hai: 
-                <strong>“Roz thoda sa improve hona.”</strong>
+                Positive thinking ek superpower hai. Jo soch doge, wahi ban jaoge.
             </p>
-        </section>
+            <div class="post-tags">#mindset #positivity</div>
+        </article>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact" style="margin-top: 16px; margin-bottom: 24px;">
-            <h2 class="section-title">Contact</h2>
-            <p class="post-text">
-                Agar aapko ye website pasand aayi ho ya aapko koi suggestion dena ho,
-                to aap mujhe yahan connect kar sakte hain:
-            </p>
-            <p class="post-text" style="margin-top: 6px;">
-                📩 Email: <strong>your-email@example.com</strong> (yaha apna email daal sakte ho) <br>
-                📱 Instagram: <strong>@g2b_motivation</strong> (jab insta page ready ho jaaye)
-            </p>
-        </section>
+    </div>
+</section>
 
-        <!-- FOOTER -->
-        <footer>
-            © <span id="year"></span> G2B Motivation • All Rights Reserved
-        </footer>
+<section id="about">
+    <h2 class="section-title">About G2B Motivation</h2>
+    <p>
+        Ye platform un logon ke liye hai jo roz thoda sa improve hona chahte hain.
+    </p>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-box">
+        📩 Email: your-email@example.com<br>
+        📱 Instagram: @g2b_motivation
+    </div>
+</section>
+
+<footer>
+    <div class="social">
+        <a href="#">📘</a>
+        <a href="#">📸</a>
+        <a href="#">▶️</a>
     </div>
 
-    <script>
-        // Current year auto set karega
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    © <span id="year"></span> G2B Motivation — All Rights Reserved
+</footer>
+
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
