@@ -9,3 +9,8 @@
     <p>Meri website me aapka swagat hai!</p>
 </body>
 </html>
+<div class="read-more">
+    <a href="posts/post1.html">Read Full Post →</a>
+</div>
+<div class="read-more">
+    
