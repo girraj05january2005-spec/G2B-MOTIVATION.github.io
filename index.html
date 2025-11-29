@@ -1,77 +1,245 @@
-<section id="posts">
-    <h2 class="section-title">Latest Posts</h2>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <title>G2B Motivation | Daily Hindi Motivational Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="G2B Motivation — Hindi motivational posts, life lessons, short quotes, and positive thoughts." />
 
-    <div class="posts">
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
 
-        <!-- POST 1 -->
-        <article class="post-card">
-            <h3 class="post-title">1. Aaj ka Sankalp</h3>
-            <div class="post-meta">
-                <span>🗓️ 27 November 2025</span>
-                <span>⏱️ 1 min read</span>
-            </div>
+        body{
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:#050816;
+            color:#ffffff;
+            line-height:1.6;
+        }
 
-            <p class="post-text">
-                Har din ek chhota step lo. Chhote steps hi bade achievements banate hain.
-            </p>
+        .container{
+            max-width:960px;
+            margin:0 auto;
+            padding:16px;
+        }
 
-            <div class="post-tags">
-                <span>#daily-motivation</span>
-                <span>#g2b</span>
-                <span>#small-steps</span>
-            </div>
+        /* HEADER */
+        header{
+            padding:16px 0;
+            border-bottom:1px solid #1c2333;
+            margin-bottom:16px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:8px;
+        }
+        .logo{
+            font-size:26px;
+            font-weight:700;
+            color:#00e5ff;
+        }
+        .tagline{
+            font-size:13px;
+            color:#cfcfcf;
+        }
 
-            <div class="read-more">
-                <a href="posts/post1.html">Read Full Post →</a>
-            </div>
-        </article>
+        nav a{
+            color:#d0d0d0;
+            font-size:14px;
+            margin-left:12px;
+            text-decoration:none;
+        }
+        nav a:hover{
+            color:#00e5ff;
+        }
 
-        <!-- POST 2 -->
-        <article class="post-card">
-            <h3 class="post-title">2. Soch Badlo, Result Badlenge</h3>
-            <div class="post-meta">
-                <span>🗓️ 26 November 2025</span>
-                <span>⏱️ 1 min read</span>
-            </div>
+        /* POSTS LIST */
+        .section-title{
+            font-size:20px;
+            margin:8px 0 14px;
+        }
 
-            <p class="post-text">
-                Jab tum “main nahi kar sakta” sochte ho to dimaag reason dhoondta hai.
-                Jab tum “main seekh sakta hoon” sochte ho to dimaag solution dhoondta hai.
-            </p>
+        .posts{
+            display:flex;
+            flex-direction:column;
+            gap:16px;
+        }
 
-            <div class="post-tags">
-                <span>#mindset</span>
-                <span>#positivity</span>
-            </div>
+        .post-card{
+            background:#0a0f23;
+            border-radius:14px;
+            border:1px solid #1f2840;
+            padding:18px;
+        }
 
-            <div class="read-more">
-                <a href="posts/post2.html">Read Full Post →</a>
-            </div>
-        </article>
+        .post-title{
+            font-size:18px;
+            font-weight:600;
+            margin-bottom:4px;
+        }
 
-        <!-- POST 3 -->
-        <article class="post-card">
-            <h3 class="post-title">3. Fail Hone Ka Dar Chhodo</h3>
-            <div class="post-meta">
-                <span>🗓️ 25 November 2025</span>
-                <span>⏱️ 2 min read</span>
-            </div>
+        .post-meta{
+            font-size:13px;
+            color:#aaaaaa;
+            margin-bottom:8px;
+        }
 
-            <p class="post-text">
-                Log aksar girne se darte hain, isliye start hi nahi karte.
-                Asli failure ruk jana hai, try karte rehna nahi.
-            </p>
+        .post-text{
+            font-size:14px;
+            color:#e4e4e4;
+        }
 
-            <div class="post-tags">
-                <span>#no-fear</span>
-                <span>#keep-going</span>
-            </div>
+        .post-tags{
+            margin-top:8px;
+            font-size:12px;
+            color:#9bb0ff;
+        }
 
-            <div class="read-more">
-                <a href="posts/post3.html">Read Full Post →</a>
-            </div>
-        </article>
+        .post-tags span{
+            margin-right:6px;
+        }
 
-    </div>
-</section>
+        .read-more{
+            margin-top:8px;
+        }
+        .read-more a{
+            color:#00e5ff;
+            font-weight:600;
+            text-decoration:none;
+            font-size:14px;
+        }
+        .read-more a:hover{
+            text-decoration:underline;
+        }
+
+        footer{
+            margin-top:24px;
+            border-top:1px solid #1c2333;
+            padding:12px 0;
+            text-align:center;
+            font-size:12px;
+            color:#aaaaaa;
+        }
+
+        @media(max-width:600px){
+            header{
+                flex-direction:column;
+                align-items:flex-start;
+            }
+            nav{
+                margin-top:4px;
+            }
+            nav a{
+                margin-left:0;
+                margin-right:12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <div>
+            <div class="logo">G2B MOTIVATION</div>
+            <div class="tagline">Stay inspired. Never stop creating.</div>
+        </div>
+        <nav>
+            <a href="#posts">Posts</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="posts">
+        <h2 class="section-title">Latest Posts</h2>
+
+        <div class="posts">
+
+            <!-- POST 1 -->
+            <article class="post-card">
+                <h3 class="post-title">1. Aaj ka Sankalp</h3>
+                <div class="post-meta">🗓️ 27 November 2025 • ⏱️ 1 min read</div>
+                <p class="post-text">
+                    Har din ek chhota step lo. Chhote steps hi bade achievements banate hain.
+                </p>
+                <div class="post-tags">
+                    <span>#daily-motivation</span>
+                    <span>#g2b</span>
+                    <span>#small-steps</span>
+                </div>
+                <div class="read-more">
+                    <a href="posts/post1.html">Read Full Post →</a>
+                </div>
+            </article>
+
+            <!-- POST 2 -->
+            <article class="post-card">
+                <h3 class="post-title">2. Soch Badlo, Result Badlenge</h3>
+                <div class="post-meta">🗓️ 26 November 2025 • ⏱️ 1 min read</div>
+                <p class="post-text">
+                    Jab tum “main nahi kar sakta” sochte ho to dimaag reason dhoondta hai. 
+                    Jab tum “main seekh sakta hoon” sochte ho to dimaag solution dhoondta hai.
+                </p>
+                <div class="post-tags">
+                    <span>#mindset</span>
+                    <span>#positivity</span>
+                </div>
+                <div class="read-more">
+                    <a href="posts/post2.html">Read Full Post →</a>
+                </div>
+            </article>
+
+            <!-- POST 3 -->
+            <article class="post-card">
+                <h3 class="post-title">3. Fail Hone Ka Dar Chhodo</h3>
+                <div class="post-meta">🗓️ 25 November 2025 • ⏱️ 2 min read</div>
+                <p class="post-text">
+                    Log aksar girne se darte hain, isliye start hi nahi karte. 
+                    Asli failure ruk jana hai, try karte rehna nahi.
+                </p>
+                <div class="post-tags">
+                    <span>#no-fear</span>
+                    <span>#keep-going</span>
+                </div>
+                <div class="read-more">
+                    <a href="posts/post3.html">Read Full Post →</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About</h2>
+        <p class="post-text">
+            G2B Motivation ek simple Hindi motivational blog hai jahan main apne thoughts, 
+            learnings aur chhote–chhote ideas share karta hoon.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p class="post-text">
+            📩 Email: your-email@example.com<br>
+            📱 Instagram: @g2b_motivation
+        </p>
+    </section>
+
+    <footer>
+        © <span id="year"></span> G2B Motivation • All Rights Reserved
+    </footer>
+
+</div>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+
 
