@@ -37,15 +37,18 @@
             flex-wrap:wrap;
             gap:8px;
         }
-        .logo{
+        .logo-box{
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+        .logo-box img{
+            height:40px;
+        }
+        .logo-text{
             font-size:26px;
             font-weight:700;
             color:#00e5ff;
-            <div class="logo">
-    <img src="g2b-logo.png" style="height:40px;vertical-align:middle;margin-right:8px;">
-    <span style="font-size:22px;font-weight:700;color:#00e5ff;">G2B MOTIVATION</span>
-</div>
-
         }
         .tagline{
             font-size:13px;
@@ -130,19 +133,6 @@
             color:#aaaaaa;
         }
 
-        @media(max-width:600px){
-            header{
-                flex-direction:column;
-                align-items:flex-start;
-            }
-            nav{
-                margin-top:4px;
-            }
-            nav a{
-                margin-left:0;
-                margin-right:12px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -150,9 +140,13 @@
 
     <header>
         <div>
-            <div class="logo">G2B MOTIVATION</div>
+            <div class="logo-box">
+                <img src="g2b-logo.png" alt="G2B Logo">
+                <div class="logo-text">G2B MOTIVATION</div>
+            </div>
             <div class="tagline">Stay inspired. Never stop creating.</div>
         </div>
+
         <nav>
             <a href="#posts">Posts</a>
             <a href="#about">About</a>
@@ -231,10 +225,10 @@
         <h2 class="section-title">Contact</h2>
         <p class="post-text">
             📩 Email: girraj05january2005@zohomail.in<br>
-            📱 Instagram: https://www.instagram.com/imgirrajbunkar?igsh=YzIydXI0Z3pwaG83
-               Facbook page: https://www.facebook.com/share/17nX5DX4ge/
-               Whatsapp page: https://whatsapp.com/channel/0029VamrjaV9hXFEOJXu071W
-               Arattai page:  https://aratt.ai/@g2b_group
+            📱 Instagram: https://www.instagram.com/imgirrajbunkar?igsh=YzIydXI0Z3pwaG83<br>
+            👍 Facebook: https://www.facebook.com/share/17nX5DX4ge/<br>
+            💬 WhatsApp: https://whatsapp.com/channel/0029VamrjaV9hXFEOJXu071W<br>
+            🔸 Arattai: https://aratt.ai/@g2b_group
         </p>
     </section>
 
@@ -249,5 +243,6 @@
 </script>
 </body>
 </html>
+
 
 
