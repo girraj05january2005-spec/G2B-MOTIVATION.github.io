@@ -7,144 +7,185 @@
     <meta name="description" content="G2B Motivation — Hindi motivational posts, life lessons, short quotes, and positive thoughts." />
 
     <style>
-        *{
-            box-sizing:border-box;
-            margin:0;
-            padding:0;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        body{
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background:#050816;
-            color:#ffffff;
-            line-height:1.6;
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #050816;
+            color: #ffffff;
+            line-height: 1.6;
         }
 
-        .container{
-            max-width:960px;
-            margin:0 auto;
-            padding:16px;
+        a {
+            color: #00e5ff;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 16px;
         }
 
         /* HEADER */
-        header{
-            padding:16px 0;
-            border-bottom:1px solid #1c2333;
-            margin-bottom:16px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            flex-wrap:wrap;
-            gap:8px;
-        }
-        .logo-box{
-            display:flex;
-            align-items:center;
-            gap:10px;
-        }
-        .logo-box img{
-            height:40px;
-        }
-        .logo-text{
-            font-size:26px;
-            font-weight:700;
-            color:#00e5ff;
-        }
-        .tagline{
-            font-size:13px;
-            color:#cfcfcf;
+        header {
+            padding: 16px 0;
+            border-bottom: 1px solid #1c2333;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
-        nav a{
-            color:#d0d0d0;
-            font-size:14px;
-            margin-left:12px;
-            text-decoration:none;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        nav a:hover{
-            color:#00e5ff;
+
+        .brand-logo {
+            height: 40px;
+            width: 40px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .site-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #00e5ff;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: #cfcfcf;
+        }
+
+        nav a {
+            color: #d0d0d0;
+            font-size: 14px;
+            margin-left: 12px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        /* SECTIONS */
+        .section-title {
+            font-size: 20px;
+            margin: 8px 0 14px;
         }
 
         /* POSTS LIST */
-        .section-title{
-            font-size:20px;
-            margin:8px 0 14px;
+        .posts {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        .posts{
-            display:flex;
-            flex-direction:column;
-            gap:16px;
+        .post-card {
+            background: #0a0f23;
+            border-radius: 14px;
+            border: 1px solid #1f2840;
+            padding: 18px;
         }
 
-        .post-card{
-            background:#0a0f23;
-            border-radius:14px;
-            border:1px solid #1f2840;
-            padding:18px;
+        .post-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
         }
 
-        .post-title{
-            font-size:18px;
-            font-weight:600;
-            margin-bottom:4px;
+        .post-meta {
+            font-size: 13px;
+            color: #aaaaaa;
+            margin-bottom: 8px;
         }
 
-        .post-meta{
-            font-size:13px;
-            color:#aaaaaa;
-            margin-bottom:8px;
+        .post-text {
+            font-size: 14px;
+            color: #e4e4e4;
         }
 
-        .post-text{
-            font-size:14px;
-            color:#e4e4e4;
+        .post-tags {
+            margin-top: 8px;
+            font-size: 12px;
+            color: #9bb0ff;
         }
 
-        .post-tags{
-            margin-top:8px;
-            font-size:12px;
-            color:#9bb0ff;
+        .post-tags span {
+            margin-right: 6px;
         }
 
-        .post-tags span{
-            margin-right:6px;
+        .read-more {
+            margin-top: 8px;
         }
 
-        .read-more{
-            margin-top:8px;
-        }
-        .read-more a{
-            color:#00e5ff;
-            font-weight:600;
-            text-decoration:none;
-            font-size:14px;
-        }
-        .read-more a:hover{
-            text-decoration:underline;
+        .read-more a {
+            color: #00e5ff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
         }
 
-        footer{
-            margin-top:24px;
-            border-top:1px solid #1c2333;
-            padding:12px 0;
-            text-align:center;
-            font-size:12px;
-            color:#aaaaaa;
+        .read-more a:hover {
+            text-decoration: underline;
         }
 
+        /* CONTACT LIST */
+        .contact-list {
+            margin-top: 4px;
+            font-size: 14px;
+        }
+
+        .contact-list div {
+            margin-bottom: 4px;
+        }
+
+        footer {
+            margin-top: 24px;
+            border-top: 1px solid #1c2333;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #aaaaaa;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 4px;
+            }
+            nav a {
+                margin-left: 0;
+                margin-right: 12px;
+            }
+        }
     </style>
 </head>
 <body>
 <div class="container">
 
+    <!-- HEADER -->
     <header>
-        <div>
-            <div class="logo-box">
-                <img src="g2b-logo.png" alt="G2B Logo">
-                <div class="logo-text">G2B MOTIVATION</div>
+        <div class="brand">
+            <!-- YAHAN LOGO IMAGE -->
+            <!-- Dhyaan rahe: g2b-logo.png file index.html ke sath hi root folder me honi chahiye -->
+            <img src="g2b-logo.png" alt="G2B Logo" class="brand-logo">
+            <div>
+                <div class="site-title">G2B MOTIVATION</div>
+                <div class="tagline">Stay inspired. Never stop creating.</div>
             </div>
-            <div class="tagline">Stay inspired. Never stop creating.</div>
         </div>
 
         <nav>
@@ -154,6 +195,7 @@
         </nav>
     </header>
 
+    <!-- LATEST POSTS -->
     <section id="posts">
         <h2 class="section-title">Latest Posts</h2>
 
@@ -181,7 +223,7 @@
                 <h3 class="post-title">2. Soch Badlo, Result Badlenge</h3>
                 <div class="post-meta">🗓️ 26 November 2025 • ⏱️ 1 min read</div>
                 <p class="post-text">
-                    Jab tum “main nahi kar sakta” sochte ho to dimaag reason dhoondta hai. 
+                    Jab tum “main nahi kar sakta” sochte ho to dimaag reason dhoondta hai.
                     Jab tum “main seekh sakta hoon” sochte ho to dimaag solution dhoondta hai.
                 </p>
                 <div class="post-tags">
@@ -198,7 +240,7 @@
                 <h3 class="post-title">3. Fail Hone Ka Dar Chhodo</h3>
                 <div class="post-meta">🗓️ 25 November 2025 • ⏱️ 2 min read</div>
                 <p class="post-text">
-                    Log aksar girne se darte hain, isliye start hi nahi karte. 
+                    Log aksar girne se darte hain, isliye start hi nahi karte.
                     Asli failure ruk jana hai, try karte rehna nahi.
                 </p>
                 <div class="post-tags">
@@ -213,23 +255,47 @@
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
         <h2 class="section-title">About</h2>
         <p class="post-text">
-            G2B Motivation ek simple Hindi motivational blog hai jahan main apne thoughts, 
-            learnings aur chhote–chhote ideas share karta hoon.
+            G2B Motivation ek simple Hindi motivational blog hai jahan main apne thoughts,
+            learnings aur chhote–chhote ideas share karta hoon. Target ye hai ki roz thoda
+            sa padhkar aapko motivation mile aur aap apni life me chhote positive changes laa sako.
         </p>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
         <h2 class="section-title">Contact</h2>
         <p class="post-text">
-            📩 Email: girraj05january2005@zohomail.in<br>
-            📱 Instagram: https://www.instagram.com/imgirrajbunkar?igsh=YzIydXI0Z3pwaG83<br>
-            👍 Facebook: https://www.facebook.com/share/17nX5DX4ge/<br>
-            💬 WhatsApp: https://whatsapp.com/channel/0029VamrjaV9hXFEOJXu071W<br>
-            🔸 Arattai: https://aratt.ai/@g2b_group
+            Agar aapko ye content pasand aaye, to yahaan se mujhse connect ho sakte hain:
         </p>
+        <div class="contact-list">
+            <div>📩 Email:
+                <a href="mailto:girraj05january2005@zohomail.in">girraj05january2005@zohomail.in</a>
+            </div>
+            <div>📷 Instagram:
+                <a href="https://www.instagram.com/imgirrajbunkar?igsh=YzIydXI0Z3pwaG83" target="_blank">
+                    @imgirrajbunkar
+                </a>
+            </div>
+            <div>👍 Facebook:
+                <a href="https://www.facebook.com/share/17nX5DX4ge/" target="_blank">
+                    G2B Motivation Page
+                </a>
+            </div>
+            <div>💬 WhatsApp Channel:
+                <a href="https://whatsapp.com/channel/0029VamrjaV9hXFEOJXu071W" target="_blank">
+                    Join on WhatsApp
+                </a>
+            </div>
+            <div>🔸 Arattai:
+                <a href="https://aratt.ai/@g2b_group" target="_blank">
+                    @g2b_group
+                </a>
+            </div>
+        </div>
     </section>
 
     <footer>
